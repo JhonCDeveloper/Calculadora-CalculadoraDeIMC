@@ -1,0 +1,266 @@
+body {
+    background-color: #1E201E;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;              
+    margin: 0;                  
+}
+
+.section.active {
+    display: block; /* Oculta todas las secciones por defecto */
+  }
+  
+  .section {
+    display: none; /* Muestra solo la sección activa */
+  }
+
+  /* Estilos del switch */
+.switch-container {
+    display: flex;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    z-index: 9999;
+    
+  }
+
+  .switch-label {
+    display: flex;          /* Asegura que la etiqueta esté en una nueva línea */
+    font-size: 30px;       /* Ajusta el tamaño de la fuente */
+    font-weight: 700;
+    color: #fff;             /* Cambia el color del texto */
+    margin: auto 10px;     /* Espacio entre la etiqueta y el switch */
+    text-align: center;      /* Centra el texto */
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #4caf50;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+.titulo, .title2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: -40px;
+    text-align: center;
+}
+
+.h2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #757575;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 60px); /* Una fila para el display y 4 filas para botones */
+    grid-template-columns: repeat(4, 60px);  /* Cuatro columnas iguales */
+    gap: 10px;                              /* Espaciado entre celdas */
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.calculadoraDeImc {
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 60px); /* Una fila para el display y 4 filas para botones */
+    grid-template-columns: repeat(3, 100px);  /* Cuatro columnas iguales */
+    gap: 10px;                              /* Espaciado entre celdas */
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    max-width: calc(3 * 100px + 2 * 10px + 40px);
+    box-sizing: border-box;  
+}
+
+.display {
+    grid-column: span 4;                    /* Ocupa las 4 columnas */
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Evita que el texto se desborde */
+}
+
+.display2 {
+    grid-column: span 3;                    /* Ocupa las 4 columnas */
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Evita que el texto se desborde */
+}
+
+.imcText {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+button {
+    background: #444;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.button2 {
+    background: #444;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:active {
+    background: #666;
+    transform: scale(0.95); /* Efecto de presión al hacer clic */
+}
+
+/* Estilo para el botón C (limpiar) */
+button:nth-child(1) {
+    background: #e53935; /* Rojo para el botón de limpiar */
+}
+
+button:nth-child(1):hover {
+    background: #d32f2f;
+}
+
+/* Estilo para el botón de backspace */
+button:nth-child(4) {
+    background: #757575; /* Gris para backspace */
+}
+
+button:nth-child(4):hover {
+    background: #616161;
+}
+
+/* Estilo para el botón "=" */
+button:nth-child(20) {
+    grid-column: span 2; /* Ocupa 2 columnas */
+    background: #0a75da;
+}
+
+button:nth-child(20):hover {
+    background: #539fe5;
+}
+
+.button2:nth-child(15):hover {
+    background: #539fe5;
+}
+
+/* .button2:nth-child(15) {
+    grid-column: span 2;
+    background: #0a75da;
+} */
+
+/* Botón "%" */
+button:nth-child(2):hover {
+    background: #539fe5;
+}
+
+/* Botones especiales como operadores */
+button:nth-child(3), 
+button:nth-child(5), 
+button:nth-child(6), 
+button:nth-child(7), 
+button:nth-child(8), 
+button:nth-child(9), 
+button:nth-child(10), 
+button:nth-child(11), 
+button:nth-child(12), 
+button:nth-child(13), 
+button:nth-child(14), 
+button:nth-child(15), 
+button:nth-child(16), 
+button:nth-child(17), 
+button:nth-child(18), 
+button:nth-child(19) {
+    background: #555;
+}
+
+button:nth-child(3):hover,
+button:nth-child(5):hover,
+button:nth-child(6):hover,
+button:nth-child(7):hover,
+button:nth-child(8):hover,
+button:nth-child(9):hover,
+button:nth-child(10):hover,
+button:nth-child(11):hover,
+button:nth-child(12):hover,
+button:nth-child(13):hover,
+button:nth-child(14):hover,
+button:nth-child(15):hover,
+button:nth-child(16):hover,
+button:nth-child(17):hover,
+button:nth-child(18):hover,
+button:nth-child(19):hover {
+    background: #666;
+}
