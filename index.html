@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tu IMC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="switch-container">
+        <label for="section-switch" class="switch-label">IMC</label>
+        <label class="switch">
+          <input type="checkbox" id="toggleSwitch" onchange="toggleSections()">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    <div id="section1" class="section active">
+
+        <div class="titulo">
+            <h1>CALCULADORA</h1>
+        </div>
+
+
+        <div class="calculadora">
+            <div id="display" class="display">0</div>
+            <button class="button">C</button>
+            <button class="button">%</button>
+            <button class="button">/</button>
+            <button class="button" value="backspace"><span class="material-icons">backspace</span></button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">*</button>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">+</button>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button">=</button>
+        </div>
+
+    </div>
+
+    <div id="section2" class="section">
+
+        <div class="title2">
+            <h1>CALCULADORA DE IMC</h1>
+        </div>
+
+        <div class="h2" id="instruction">Ingresa tu peso en kilogramos y presiona "Siguiente ->".</div>
+
+         <div class="calculadoraDeImc">
+            <div id="display2" class="display2">0</div>
+            <button class="button2">C</button>
+            <button id="nextButton" class="button2" value="nextButton"><span class="material-icons">arrow_forward</span></button>
+            <button class="button2" value="backspace"><span class="material-icons">backspace</span></button>
+            <button class="button2">1</button>
+            <button class="button2">2</button>
+            <button class="button2">3</button>
+            <button class="button2">4</button>
+            <button class="button2">5</button>
+            <button class="button2">6</button>
+            <button class="button2">7</button>
+            <button class="button2">8</button>
+            <button class="button2">9</button>
+            <button class="button2">0</button>           
+            <button class="button2">.</button>
+            <button id="resultButton" class="button2">=</button>
+         </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
